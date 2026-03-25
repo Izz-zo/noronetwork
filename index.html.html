@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NoroNetwork | Remote IT & Cybersecurity Services</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'DM Sans', sans-serif; color: #1a1a1a; background: #fff; line-height: 1.6; }
+  .nn-nav { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 2.5rem; border-bottom: 0.5px solid #e5e5e5; background: #fff; }
+  .nn-logo { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 500; letter-spacing: -0.3px; color: #1a1a1a; text-decoration: none; }
+  .nn-logo span { color: #1A73E8; }
+  .nn-nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nn-nav-links a { text-decoration: none; font-size: 14px; color: #666; transition: color 0.2s; }
+  .nn-nav-links a:hover { color: #1a1a1a; }
+  .nn-cta-btn { background: #0D1B2A; color: #fff; border: none; padding: 10px 22px; border-radius: 6px; font-size: 13px; font-family: 'DM Sans', sans-serif; font-weight: 500; cursor: pointer; }
+  .nn-hero { padding: 5rem 2.5rem 4rem; max-width: 760px; margin: 0 auto; text-align: center; }
+  .nn-eyebrow { display: inline-block; font-size: 11px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #1A73E8; background: #E8F1FD; padding: 5px 14px; border-radius: 20px; margin-bottom: 1.5rem; }
+  .nn-hero h1 { font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 400; line-height: 1.2; letter-spacing: -0.5px; color: #1a1a1a; margin-bottom: 1.25rem; }
+  .nn-hero h1 em { font-style: italic; color: #1A73E8; }
+  .nn-hero p { font-size: 16px; color: #666; max-width: 520px; margin: 0 auto 2rem; line-height: 1.7; }
+  .nn-hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .nn-btn-primary { background: #0D1B2A; color: #fff; border: none; padding: 13px 28px; border-radius: 6px; font-size: 14px; font-family: 'DM Sans', sans-serif; font-weight: 500; cursor: pointer; }
+  .nn-divider { height: 0.5px; background: #e5e5e5; margin: 0 2.5rem; }
+  .nn-trust { padding: 3rem 2.5rem; background: #f9f9f7; border-top: 0.5px solid #e5e5e5; border-bottom: 0.5px solid #e5e5e5; }
+  .nn-trust-inner { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem; }
+  .nn-trust-stat { text-align: center; }
+  .nn-trust-stat .num { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 400; color: #1a1a1a; line-height: 1; margin-bottom: 4px; }
+  .nn-trust-stat .label { font-size: 12px; color: #888; letter-spacing: 0.5px; }
+  .nn-services { padding: 4rem 2.5rem; max-width: 1000px; margin: 0 auto; }
+  .nn-section-label { font-size: 11px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #888; margin-bottom: 0.5rem; }
+  .nn-section-title { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 400; color: #1a1a1a; margin-bottom: 2.5rem; letter-spacing: -0.3px; }
+  .nn-services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1px; border: 0.5px solid #e5e5e5; border-radius: 12px; overflow: hidden; }
+  .nn-service-card { background: #fff; padding: 1.75rem; border-right: 0.5px solid #e5e5e5; border-bottom: 0.5px solid #e5e5e5; transition: background 0.2s; }
+  .nn-service-card:hover { background: #f9f9f7; }
+  .nn-service-icon { width: 36px; height: 36px; background: #E8F1FD; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
+  .nn-service-icon svg { width: 18px; height: 18px; stroke: #1A73E8; fill: none; stroke-width: 1.5; }
+  .nn-service-card h3 { font-size: 15px; font-weight: 500; color: #1a1a1a; margin-bottom: 0.5rem; }
+  .nn-service-card p { font-size: 13px; color: #666; line-height: 1.6; }
+  .nn-about { padding: 4rem 2.5rem; max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+  .nn-about-text p { font-size: 15px; color: #666; line-height: 1.8; margin-bottom: 1rem; }
+  .nn-contact-box { background: #0D1B2A; border-radius: 12px; padding: 2rem; color: #fff; }
+  .nn-contact-box h3 { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 400; margin-bottom: 0.75rem; color: #fff; }
+  .nn-contact-box p { font-size: 13px; color: rgba(255,255,255,0.6); margin-bottom: 1.5rem; line-height: 1.6; }
+  .nn-contact-link { display: flex; align-items: center; gap: 10px; font-size: 13px; color: rgba(255,255,255,0.8); text-decoration: none; padding: 10px 14px; background: rgba(255,255,255,0.06); border-radius: 6px; border: 0.5px solid rgba(255,255,255,0.1); }
+  .nn-contact-link .platform { font-size: 11px; color: rgba(255,255,255,0.4); margin-left: auto; letter-spacing: 0.5px; text-transform: uppercase; }
+  .nn-footer { border-top: 0.5px solid #e5e5e5; padding: 1.5rem 2.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+  .nn-footer-logo { font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 500; color: #1a1a1a; }
+  .nn-footer-logo span { color: #1A73E8; }
+  .nn-footer p { font-size: 12px; color: #888; }
+  @media (max-width: 640px) {
+    .nn-hero h1 { font-size: 32px; }
+    .nn-about { grid-template-columns: 1fr; gap: 2rem; }
+    .nn-nav-links { display: none; }
+    .nn-trust-inner { justify-content: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nn-nav">
+  <a class="nn-logo" href="#">Noro<span>Network</span></a>
+  <ul class="nn-nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nn-cta-btn" onclick="window.location.href='mailto:noronetwork@proton.me'">Get in touch</button>
+</nav>
+
+<section class="nn-hero">
+  <div class="nn-eyebrow">Remote IT & Network Services</div>
+  <h1>Secure networks.<br><em>Delivered with precision.</em></h1>
+  <p>NoroNetwork provides professional VPN configuration, network troubleshooting, IT support and cybersecurity solutions to clients worldwide.</p>
+  <div class="nn-hero-btns">
+    <button class="nn-btn-primary" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">View services</button>
+  </div>
+</section>
+
+<div class="nn-divider"></div>
+
+<section class="nn-trust">
+  <div class="nn-trust-inner">
+    <div class="nn-trust-stat"><div class="num">10+</div><div class="label">Years hands-on experience</div></div>
+    <div class="nn-trust-stat"><div class="num">5</div><div class="label">Active service categories</div></div>
+    <div class="nn-trust-stat"><div class="num">Global</div><div class="label">Remote client reach</div></div>
+    <div class="nn-trust-stat"><div class="num">100%</div><div class="label">Remote & flexible delivery</div></div>
+  </div>
+</section>
+
+<section class="nn-services" id="services">
+  <div class="nn-section-label">What we do</div>
+  <div class="nn-section-title">Services built for the modern network</div>
+  <div class="nn-services-grid">
+    <div class="nn-service-card">
+      <div class="nn-service-icon"><svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M8 12h8M12 9v6"/></svg></div>
+      <h3>VPN Setup & Configuration</h3>
+      <p>WireGuard and Cloudflare Zero Trust deployment for individuals and teams requiring private, encrypted access.</p>
+    </div>
+    <div class="nn-service-card">
+      <div class="nn-service-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M2 12h4M18 12h4M12 2v4M12 18v4"/></svg></div>
+      <h3>Network Troubleshooting</h3>
+      <p>Systematic diagnosis and resolution of connectivity issues, IP conflicts, driver failures and hardware faults.</p>
+    </div>
+    <div class="nn-service-card">
+      <div class="nn-service-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+      <h3>IT Support & Hardware</h3>
+      <p>Remote and advisory support for Windows OS, driver installation, component replacement and system configuration.</p>
+    </div>
+    <div class="nn-service-card">
+      <div class="nn-service-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+      <h3>Cloudflare Zero Trust</h3>
+      <p>Secure access architecture configuration using Cloudflare Zero Trust for teams and distributed environments.</p>
+    </div>
+    <div class="nn-service-card">
+      <div class="nn-service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <h3>Cybersecurity Consulting</h3>
+      <p>Foundational security advisory covering threat awareness, network hardening and access control best practices.</p>
+    </div>
+  </div>
+</section>
+
+<div class="nn-divider"></div>
+
+<section class="nn-about" id="about">
+  <div class="nn-about-text">
+    <div class="nn-section-label">About</div>
+    <div class="nn-section-title" style="font-size: 28px; margin-bottom: 1.25rem;">Who we are</div>
+    <p>NoroNetwork is an independent IT and cybersecurity company delivering practical, precise technical solutions to clients across the globe. Every engagement is handled with full attention, no outsourcing, no shortcuts.</p>
+    <p>We specialize in network configuration, VPN infrastructure, remote IT support and foundational cybersecurity work. Our approach is straightforward: understand the problem, solve it cleanly, and leave the client better protected than before.</p>
+    <p>Available remotely. Worldwide.</p>
+  </div>
+  <div class="nn-contact-box" id="contact">
+    <h3>Work with us</h3>
+    <p>Available for remote engagements worldwide. Reach out and we will respond promptly.</p>
+    <a class="nn-contact-link" href="mailto:noronetwork@proton.me">
+      noronetwork@proton.me
+      <span class="platform">Email</span>
+    </a>
+  </div>
+</section>
+
+<footer class="nn-footer">
+  <div class="nn-footer-logo">Noro<span>Network</span></div>
+  <p>Professional IT & cybersecurity services. Remote. Worldwide.</p>
+  <p>© 2026 NoroNetwork. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
