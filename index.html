@@ -3,149 +3,583 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NoroNetwork | Remote IT & Cybersecurity Services</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+<title>NoroNetwork | Remote IT & Cybersecurity</title>
+<meta name="description" content="NoroNetwork is an independent IT and cybersecurity practice offering VPN setup, network troubleshooting, IT support, Cloudflare Zero Trust, and cybersecurity consulting. Remote. Worldwide.">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: 'DM Sans', sans-serif; color: #1a1a1a; background: #fff; line-height: 1.6; }
-  .nn-nav { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 2.5rem; border-bottom: 0.5px solid #e5e5e5; background: #fff; }
-  .nn-logo { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 500; letter-spacing: -0.3px; color: #1a1a1a; text-decoration: none; }
-  .nn-logo span { color: #1A73E8; }
-  .nn-nav-links { display: flex; gap: 2rem; list-style: none; }
-  .nn-nav-links a { text-decoration: none; font-size: 14px; color: #666; transition: color 0.2s; }
-  .nn-nav-links a:hover { color: #1a1a1a; }
-  .nn-cta-btn { background: #0D1B2A; color: #fff; border: none; padding: 10px 22px; border-radius: 6px; font-size: 13px; font-family: 'DM Sans', sans-serif; font-weight: 500; cursor: pointer; }
-  .nn-hero { padding: 5rem 2.5rem 4rem; max-width: 760px; margin: 0 auto; text-align: center; }
-  .nn-eyebrow { display: inline-block; font-size: 11px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #1A73E8; background: #E8F1FD; padding: 5px 14px; border-radius: 20px; margin-bottom: 1.5rem; }
-  .nn-hero h1 { font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 400; line-height: 1.2; letter-spacing: -0.5px; color: #1a1a1a; margin-bottom: 1.25rem; }
-  .nn-hero h1 em { font-style: italic; color: #1A73E8; }
-  .nn-hero p { font-size: 16px; color: #666; max-width: 520px; margin: 0 auto 2rem; line-height: 1.7; }
-  .nn-hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-  .nn-btn-primary { background: #0D1B2A; color: #fff; border: none; padding: 13px 28px; border-radius: 6px; font-size: 14px; font-family: 'DM Sans', sans-serif; font-weight: 500; cursor: pointer; }
-  .nn-divider { height: 0.5px; background: #e5e5e5; margin: 0 2.5rem; }
-  .nn-trust { padding: 3rem 2.5rem; background: #f9f9f7; border-top: 0.5px solid #e5e5e5; border-bottom: 0.5px solid #e5e5e5; }
-  .nn-trust-inner { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem; }
-  .nn-trust-stat { text-align: center; }
-  .nn-trust-stat .num { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 400; color: #1a1a1a; line-height: 1; margin-bottom: 4px; }
-  .nn-trust-stat .label { font-size: 12px; color: #888; letter-spacing: 0.5px; }
-  .nn-services { padding: 4rem 2.5rem; max-width: 1000px; margin: 0 auto; }
-  .nn-section-label { font-size: 11px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #888; margin-bottom: 0.5rem; }
-  .nn-section-title { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 400; color: #1a1a1a; margin-bottom: 2.5rem; letter-spacing: -0.3px; }
-  .nn-services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1px; border: 0.5px solid #e5e5e5; border-radius: 12px; overflow: hidden; }
-  .nn-service-card { background: #fff; padding: 1.75rem; border-right: 0.5px solid #e5e5e5; border-bottom: 0.5px solid #e5e5e5; transition: background 0.2s; }
-  .nn-service-card:hover { background: #f9f9f7; }
-  .nn-service-icon { width: 36px; height: 36px; background: #E8F1FD; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
-  .nn-service-icon svg { width: 18px; height: 18px; stroke: #1A73E8; fill: none; stroke-width: 1.5; }
-  .nn-service-card h3 { font-size: 15px; font-weight: 500; color: #1a1a1a; margin-bottom: 0.5rem; }
-  .nn-service-card p { font-size: 13px; color: #666; line-height: 1.6; }
-  .nn-about { padding: 4rem 2.5rem; max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-  .nn-about-text p { font-size: 15px; color: #666; line-height: 1.8; margin-bottom: 1rem; }
-  .nn-contact-box { background: #0D1B2A; border-radius: 12px; padding: 2rem; color: #fff; }
-  .nn-contact-box h3 { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 400; margin-bottom: 0.75rem; color: #fff; }
-  .nn-contact-box p { font-size: 13px; color: rgba(255,255,255,0.6); margin-bottom: 1.5rem; line-height: 1.6; }
-  .nn-contact-link { display: flex; align-items: center; gap: 10px; font-size: 13px; color: rgba(255,255,255,0.8); text-decoration: none; padding: 10px 14px; background: rgba(255,255,255,0.06); border-radius: 6px; border: 0.5px solid rgba(255,255,255,0.1); }
-  .nn-contact-link .platform { font-size: 11px; color: rgba(255,255,255,0.4); margin-left: auto; letter-spacing: 0.5px; text-transform: uppercase; }
-  .nn-footer { border-top: 0.5px solid #e5e5e5; padding: 1.5rem 2.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-  .nn-footer-logo { font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 500; color: #1a1a1a; }
-  .nn-footer-logo span { color: #1A73E8; }
-  .nn-footer p { font-size: 12px; color: #888; }
-  @media (max-width: 640px) {
-    .nn-hero h1 { font-size: 32px; }
-    .nn-about { grid-template-columns: 1fr; gap: 2rem; }
-    .nn-nav-links { display: none; }
-    .nn-trust-inner { justify-content: center; }
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{
+    --ink:#1c1c1e;
+    --ink-2:#4a4a4f;
+    --ink-3:#8e8e93;
+    --paper:#f5f3ee;
+    --paper-2:#ede9e2;
+    --accent:#1A73E8;
+    --dark:#1e2028;
+    --dark-2:#252830;
+    --dark-border:rgba(255,255,255,0.09);
+    --white:#ffffff;
+    --line:rgba(28,28,30,0.1);
+  }
+  html{scroll-behavior:smooth}
+  body{font-family:'Syne',sans-serif;background:var(--paper);color:var(--ink);line-height:1.5;overflow-x:hidden}
+
+  /* NAV */
+  nav{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:1.1rem 3rem;
+    border-bottom:1px solid var(--line);
+    background:rgba(245,243,238,0.94);
+    backdrop-filter:blur(14px);
+  }
+  .nav-logo{
+    font-family:'Playfair Display',serif;
+    font-size:22px;font-weight:500;letter-spacing:-0.3px;
+    text-decoration:none;color:var(--ink);
+  }
+  .nav-logo span{color:var(--accent)}
+  .nav-links{display:flex;gap:2.5rem;list-style:none}
+  .nav-links a{
+    font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;
+    color:var(--ink-2);text-decoration:none;transition:color 0.2s;
+  }
+  .nav-links a:hover{color:var(--accent)}
+  .nav-cta{
+    font-family:'Syne',sans-serif;font-size:12px;font-weight:700;
+    letter-spacing:0.08em;text-transform:uppercase;
+    color:var(--white);background:var(--dark);
+    border:none;padding:11px 24px;cursor:pointer;
+    text-decoration:none;transition:background 0.2s;
+  }
+  .nav-cta:hover{background:var(--accent)}
+
+  /* HERO */
+  .hero{
+    min-height:100vh;display:grid;
+    grid-template-columns:1fr 1fr;
+    padding-top:72px;overflow:hidden;position:relative;
+  }
+  .hero-left{
+    display:flex;flex-direction:column;justify-content:center;
+    padding:5rem 3rem;position:relative;z-index:2;
+  }
+  .hero-tag{
+    display:inline-flex;align-items:center;gap:10px;
+    font-family:'DM Mono',monospace;
+    font-size:10px;letter-spacing:0.14em;text-transform:uppercase;
+    color:var(--ink-3);margin-bottom:2rem;
+    opacity:0;animation:fadeUp 0.6s ease 0.15s forwards;
+  }
+  .hero-tag::before{content:'';width:20px;height:1px;background:var(--ink-3)}
+  h1.hero-h1{
+    font-family:'Instrument Serif',serif;
+    font-size:clamp(44px,5.2vw,80px);
+    font-weight:400;line-height:1.05;letter-spacing:-0.025em;
+    color:var(--ink);margin-bottom:1.75rem;
+    opacity:0;animation:fadeUp 0.7s ease 0.3s forwards;
+  }
+  h1.hero-h1 em{font-style:italic;color:var(--accent)}
+  .hero-desc{
+    font-size:15px;line-height:1.85;color:var(--ink-2);
+    max-width:420px;margin-bottom:2.25rem;
+    opacity:0;animation:fadeUp 0.7s ease 0.45s forwards;
+  }
+  .hero-actions{
+    display:flex;gap:1rem;flex-wrap:wrap;
+    opacity:0;animation:fadeUp 0.7s ease 0.6s forwards;
+  }
+  .btn-primary{
+    font-family:'Syne',sans-serif;font-size:12px;font-weight:700;
+    letter-spacing:0.08em;text-transform:uppercase;
+    color:var(--white);background:var(--dark);
+    border:1.5px solid var(--dark);padding:13px 26px;
+    text-decoration:none;transition:all 0.2s;display:inline-block;
+  }
+  .btn-primary:hover{background:var(--accent);border-color:var(--accent)}
+  .btn-ghost{
+    font-family:'Syne',sans-serif;font-size:12px;font-weight:700;
+    letter-spacing:0.08em;text-transform:uppercase;
+    color:var(--ink);background:transparent;
+    border:1.5px solid rgba(28,28,30,0.18);padding:13px 26px;
+    text-decoration:none;transition:all 0.2s;display:inline-block;
+  }
+  .btn-ghost:hover{border-color:var(--ink)}
+  .hero-stats{
+    display:flex;gap:2.5rem;
+    margin-top:3.5rem;padding-top:2.5rem;
+    border-top:1px solid var(--line);
+    opacity:0;animation:fadeUp 0.7s ease 0.75s forwards;
+  }
+  .stat-num{
+    font-family:'Instrument Serif',serif;
+    font-size:34px;font-style:italic;letter-spacing:-0.02em;color:var(--ink);
+    display:block;
+  }
+  .stat-label{
+    font-family:'DM Mono',monospace;
+    font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-3);
+    display:block;margin-top:2px;
+  }
+
+  /* CANVAS */
+  .hero-right{position:relative;background:var(--dark);overflow:hidden}
+  #netCanvas{width:100%;height:100%;display:block}
+
+  /* MARQUEE */
+  .marquee-wrap{
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    background:var(--dark);overflow:hidden;padding:13px 0;
+  }
+  .marquee-track{display:flex;animation:scroll 20s linear infinite;width:max-content}
+  .marquee-item{
+    font-family:'DM Mono',monospace;font-size:11px;
+    letter-spacing:0.12em;text-transform:uppercase;
+    color:rgba(255,255,255,0.38);padding:0 2.5rem;white-space:nowrap;
+  }
+  .marquee-item b{color:rgba(255,255,255,0.78);font-weight:500}
+  @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-33.333%)}}
+
+  /* SERVICES */
+  .services-section{background:var(--white);padding:7rem 3rem}
+  .services-header{
+    display:grid;grid-template-columns:1fr 1fr;
+    gap:4rem;align-items:end;margin-bottom:4rem;
+  }
+  .section-eyebrow{
+    display:flex;align-items:center;gap:10px;
+    font-family:'DM Mono',monospace;font-size:10px;
+    letter-spacing:0.14em;text-transform:uppercase;
+    color:var(--ink-3);margin-bottom:1.25rem;
+  }
+  .section-eyebrow::before{content:'';width:16px;height:1px;background:currentColor}
+  .section-title{
+    font-family:'Instrument Serif',serif;
+    font-size:clamp(34px,3.8vw,54px);font-weight:400;font-style:italic;
+    line-height:1.1;letter-spacing:-0.02em;color:var(--ink);
+  }
+  .services-intro{font-size:14px;line-height:1.85;color:var(--ink-2);max-width:380px;align-self:end}
+  .services-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);
+    border-top:1px solid var(--line);
+  }
+  .service-card{
+    padding:2.25rem 1.75rem;
+    border-right:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    transition:background 0.25s;
+  }
+  .service-card:nth-child(3n){border-right:none}
+  .service-card:nth-last-child(-n+3){border-bottom:none}
+  .service-card:hover{background:var(--paper)}
+  .svc-num{
+    font-family:'DM Mono',monospace;font-size:10px;
+    letter-spacing:0.1em;color:var(--ink-3);
+    margin-bottom:1.25rem;display:block;
+  }
+  .svc-icon{
+    width:38px;height:38px;display:flex;align-items:center;
+    justify-content:center;background:var(--paper);margin-bottom:1.1rem;
+  }
+  .svc-icon svg{width:18px;height:18px;stroke:var(--ink);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+  .svc-name{font-size:15px;font-weight:700;letter-spacing:-0.01em;color:var(--ink);margin-bottom:0.6rem}
+  .svc-desc{font-size:13px;line-height:1.75;color:var(--ink-2)}
+
+  /* ABOUT */
+  .about-section{background:var(--paper);padding:7rem 3rem}
+  .about-grid{display:grid;grid-template-columns:5fr 4fr;gap:6rem;align-items:start}
+  .about-body{display:flex;flex-direction:column;gap:1.25rem;margin-top:2rem}
+  .about-body p{font-size:15px;line-height:1.95;color:var(--ink-2)}
+  .about-body strong{color:var(--ink);font-weight:600}
+  .about-pull{
+    font-family:'Instrument Serif',serif;
+    font-size:22px;font-style:italic;font-weight:400;
+    line-height:1.45;letter-spacing:-0.01em;
+    color:var(--ink);
+    border-left:2px solid var(--accent);
+    padding-left:1.25rem;
+    margin:0.5rem 0;
+  }
+  .about-aside{position:sticky;top:100px}
+  .aside-card{background:var(--dark);padding:2.25rem;color:var(--white)}
+  .aside-card h3{
+    font-family:'Playfair Display',serif;
+    font-size:24px;font-style:italic;font-weight:400;
+    margin-bottom:0.9rem;letter-spacing:-0.01em;
+    color:rgba(255,255,255,0.92);
+  }
+  .aside-card > p{font-size:13px;line-height:1.8;color:rgba(255,255,255,0.5);margin-bottom:1.75rem}
+  .aside-email{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:13px 16px;
+    background:rgba(255,255,255,0.07);
+    border:1px solid var(--dark-border);
+    text-decoration:none;color:rgba(255,255,255,0.88);font-size:13px;
+    transition:background 0.2s;margin-bottom:1.75rem;
+  }
+  .aside-email:hover{background:rgba(255,255,255,0.12)}
+  .aside-email .arr{font-size:16px;color:rgba(255,255,255,0.4)}
+  .aside-pillars{display:flex;flex-direction:column;gap:10px}
+  .pillar{
+    display:flex;align-items:center;gap:10px;
+    font-size:12px;color:rgba(255,255,255,0.5);letter-spacing:0.02em;
+  }
+  .pillar::before{content:'';width:5px;height:5px;background:var(--accent);flex-shrink:0}
+
+  /* CONTACT */
+  .contact-section{background:var(--dark);padding:7rem 3rem}
+  .contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start}
+  .contact-left .section-eyebrow{color:rgba(255,255,255,0.32)}
+  .contact-left .section-eyebrow::before{background:rgba(255,255,255,0.32)}
+  .contact-left .section-title{color:rgba(255,255,255,0.92)}
+  .contact-left p{font-size:14px;line-height:1.85;color:rgba(255,255,255,0.46);margin-top:1.5rem}
+  .contact-form{display:flex;flex-direction:column;gap:1rem;margin-top:0.5rem}
+  .form-field{display:flex;flex-direction:column;gap:5px}
+  .form-field label{
+    font-family:'DM Mono',monospace;font-size:10px;
+    letter-spacing:0.12em;text-transform:uppercase;
+    color:rgba(255,255,255,0.35);
+  }
+  .form-field input,.form-field textarea{
+    font-family:'Syne',sans-serif;font-size:14px;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    color:rgba(255,255,255,0.88);padding:13px 15px;outline:none;
+    transition:border-color 0.2s;resize:none;
+  }
+  .form-field input::placeholder,.form-field textarea::placeholder{color:rgba(255,255,255,0.2)}
+  .form-field input:focus,.form-field textarea:focus{border-color:rgba(255,255,255,0.32)}
+  .form-submit{
+    font-family:'Syne',sans-serif;font-size:12px;font-weight:700;
+    letter-spacing:0.08em;text-transform:uppercase;
+    color:var(--dark);background:rgba(255,255,255,0.92);
+    border:none;padding:15px;cursor:pointer;
+    margin-top:0.25rem;transition:background 0.2s,color 0.2s;
+  }
+  .form-submit:hover{background:var(--accent);color:var(--white)}
+  .form-submit:disabled{opacity:0.6;cursor:default}
+  .form-msg{
+    font-family:'DM Mono',monospace;font-size:11px;
+    letter-spacing:0.06em;color:rgba(255,255,255,0.32);
+    min-height:16px;transition:color 0.3s;
+  }
+  .form-msg.ok{color:rgba(100,220,140,0.8)}
+  .form-msg.err{color:rgba(255,100,100,0.8)}
+
+  /* FOOTER */
+  footer{
+    background:var(--dark-2);
+    border-top:1px solid rgba(255,255,255,0.06);
+    padding:2rem 3rem;
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  .footer-logo{
+    font-family:'Playfair Display',serif;
+    font-size:18px;font-weight:500;letter-spacing:-0.3px;
+    color:rgba(255,255,255,0.8);text-decoration:none;
+  }
+  .footer-logo span{color:var(--accent)}
+  .footer-copy{
+    font-family:'DM Mono',monospace;font-size:10px;
+    letter-spacing:0.07em;color:rgba(255,255,255,0.25);
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp{
+    from{opacity:0;transform:translateY(18px)}
+    to{opacity:1;transform:translateY(0)}
+  }
+
+  /* RESPONSIVE */
+  @media(max-width:960px){
+    nav{padding:1rem 1.5rem}
+    .nav-links{display:none}
+    .hero{grid-template-columns:1fr;min-height:auto}
+    .hero-left{padding:3.5rem 1.5rem}
+    .hero-right{height:320px}
+    .services-header{grid-template-columns:1fr;gap:1.5rem}
+    .services-grid{grid-template-columns:1fr 1fr}
+    .service-card:nth-child(3n){border-right:1px solid var(--line)}
+    .service-card:nth-child(2n){border-right:none}
+    .about-grid{grid-template-columns:1fr;gap:3rem}
+    .about-aside{position:static}
+    .contact-inner{grid-template-columns:1fr;gap:3rem}
+    .services-section,.about-section,.contact-section{padding:4.5rem 1.5rem}
+    footer{flex-direction:column;gap:1rem;text-align:center;padding:1.75rem 1.5rem}
   }
 </style>
 </head>
 <body>
 
-<nav class="nn-nav">
-  <a class="nn-logo" href="#">Noro<span>Network</span></a>
-  <ul class="nn-nav-links">
+<nav>
+  <a class="nav-logo" href="#">Noro<span>Network</span></a>
+  <ul class="nav-links">
     <li><a href="#services">Services</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <button class="nn-cta-btn" onclick="window.location.href='mailto:noronetwork@proton.me'">Get in touch</button>
+  <a class="nav-cta" href="#contact">Work with us</a>
 </nav>
 
-<section class="nn-hero">
-  <div class="nn-eyebrow">Remote IT & Network Services</div>
-  <h1>Secure networks.<br><em>Delivered with precision.</em></h1>
-  <p>NoroNetwork provides professional VPN configuration, network troubleshooting, IT support and cybersecurity solutions to clients worldwide.</p>
-  <div class="nn-hero-btns">
-    <button class="nn-btn-primary" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">View services</button>
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-tag">Remote IT & Cybersecurity</div>
+    <h1 class="hero-h1">Precision IT.<br>Delivered<br><em>remotely.</em></h1>
+    <p class="hero-desc">Network configuration, VPN infrastructure, IT support, and cybersecurity consulting for individuals and teams. Clean work, worldwide.</p>
+    <div class="hero-actions">
+      <a class="btn-primary" href="#contact">Start a project</a>
+      <a class="btn-ghost" href="#services">Our services</a>
+    </div>
+    <div class="hero-stats">
+      <div><span class="stat-num">10+</span><span class="stat-label">Years hands-on</span></div>
+      <div><span class="stat-num">5</span><span class="stat-label">Core services</span></div>
+      <div><span class="stat-num">Global</span><span class="stat-label">Remote reach</span></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <canvas id="netCanvas"></canvas>
   </div>
 </section>
 
-<div class="nn-divider"></div>
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item"><b>WireGuard VPN</b> &middot; Remote IT Support &middot; <b>Cloudflare Zero Trust</b> &middot; Network Hardening &middot; <b>Cybersecurity</b> &middot; Hardware Repair &middot; System Administration &middot; VPN Configuration &middot; </span>
+    <span class="marquee-item"><b>WireGuard VPN</b> &middot; Remote IT Support &middot; <b>Cloudflare Zero Trust</b> &middot; Network Hardening &middot; <b>Cybersecurity</b> &middot; Hardware Repair &middot; System Administration &middot; VPN Configuration &middot; </span>
+    <span class="marquee-item"><b>WireGuard VPN</b> &middot; Remote IT Support &middot; <b>Cloudflare Zero Trust</b> &middot; Network Hardening &middot; <b>Cybersecurity</b> &middot; Hardware Repair &middot; System Administration &middot; VPN Configuration &middot; </span>
+  </div>
+</div>
 
-<section class="nn-trust">
-  <div class="nn-trust-inner">
-    <div class="nn-trust-stat"><div class="num">10+</div><div class="label">Years hands-on experience</div></div>
-    <div class="nn-trust-stat"><div class="num">5</div><div class="label">Active service categories</div></div>
-    <div class="nn-trust-stat"><div class="num">Global</div><div class="label">Remote client reach</div></div>
-    <div class="nn-trust-stat"><div class="num">100%</div><div class="label">Remote & flexible delivery</div></div>
+<section class="services-section" id="services">
+  <div class="services-header">
+    <div>
+      <div class="section-eyebrow">What we do</div>
+      <h2 class="section-title">Services built<br>for real problems</h2>
+    </div>
+    <p class="services-intro">Every engagement handled with full attention. We understand the problem first, scope it honestly, then solve it cleanly.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="svc-num">01</span>
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <div class="svc-name">VPN Setup & Configuration</div>
+      <p class="svc-desc">WireGuard and Cloudflare Zero Trust deployment for individuals and teams requiring private, encrypted remote access.</p>
+    </div>
+    <div class="service-card">
+      <span class="svc-num">02</span>
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M2 12h4M18 12h4M12 2v4M12 18v4"/></svg></div>
+      <div class="svc-name">Network Troubleshooting</div>
+      <p class="svc-desc">Systematic diagnosis and resolution of connectivity issues, IP conflicts, driver failures, and hardware faults.</p>
+    </div>
+    <div class="service-card">
+      <span class="svc-num">03</span>
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+      <div class="svc-name">IT Support & Hardware</div>
+      <p class="svc-desc">Remote and advisory support for Windows OS, driver installation, component replacement, and system configuration.</p>
+    </div>
+    <div class="service-card">
+      <span class="svc-num">04</span>
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+      <div class="svc-name">Cloudflare Zero Trust</div>
+      <p class="svc-desc">Secure access architecture using Cloudflare Zero Trust for distributed teams and remote environments.</p>
+    </div>
+    <div class="service-card">
+      <span class="svc-num">05</span>
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
+      <div class="svc-name">Cybersecurity Consulting</div>
+      <p class="svc-desc">Foundational security advisory covering threat awareness, network hardening, and access control best practices.</p>
+    </div>
   </div>
 </section>
 
-<section class="nn-services" id="services">
-  <div class="nn-section-label">What we do</div>
-  <div class="nn-section-title">Services built for the modern network</div>
-  <div class="nn-services-grid">
-    <div class="nn-service-card">
-      <div class="nn-service-icon"><svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M8 12h8M12 9v6"/></svg></div>
-      <h3>VPN Setup & Configuration</h3>
-      <p>WireGuard and Cloudflare Zero Trust deployment for individuals and teams requiring private, encrypted access.</p>
+<section class="about-section" id="about">
+  <div class="about-grid">
+    <div>
+      <div class="section-eyebrow">About</div>
+      <h2 class="section-title">Who we are</h2>
+      <div class="about-body">
+        <p class="about-pull">We built this on the belief that good technical work is rare, and that the people who need it most rarely have access to it.</p>
+        <p>NoroNetwork is an independent IT and cybersecurity practice. We started with hardware, learned every layer above it, and never stopped. What we do today grew directly from years of real problems, solved one at a time.</p>
+        <p>We work remotely, engage globally, and bring the same <strong>precision and care</strong> to every client regardless of scale. The problem gets our full attention. It leaves solved.</p>
+        <p>That is the whole idea.</p>
+      </div>
     </div>
-    <div class="nn-service-card">
-      <div class="nn-service-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M2 12h4M18 12h4M12 2v4M12 18v4"/></svg></div>
-      <h3>Network Troubleshooting</h3>
-      <p>Systematic diagnosis and resolution of connectivity issues, IP conflicts, driver failures and hardware faults.</p>
-    </div>
-    <div class="nn-service-card">
-      <div class="nn-service-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-      <h3>IT Support & Hardware</h3>
-      <p>Remote and advisory support for Windows OS, driver installation, component replacement and system configuration.</p>
-    </div>
-    <div class="nn-service-card">
-      <div class="nn-service-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
-      <h3>Cloudflare Zero Trust</h3>
-      <p>Secure access architecture configuration using Cloudflare Zero Trust for teams and distributed environments.</p>
-    </div>
-    <div class="nn-service-card">
-      <div class="nn-service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-      <h3>Cybersecurity Consulting</h3>
-      <p>Foundational security advisory covering threat awareness, network hardening and access control best practices.</p>
+    <div class="about-aside">
+      <div class="aside-card">
+        <h3>Work with us</h3>
+        <p>Available for remote engagements worldwide. Reach out and we will respond promptly.</p>
+        <a class="aside-email" href="mailto:noronetwork@proton.me">
+          noronetwork@proton.me
+          <span class="arr">&#8594;</span>
+        </a>
+        <div class="aside-pillars">
+          <div class="pillar">Worldwide remote capability</div>
+          <div class="pillar">Clear scopes, honest timelines</div>
+          <div class="pillar">Full attention on every engagement</div>
+          <div class="pillar">Problems solved, not managed</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<div class="nn-divider"></div>
-
-<section class="nn-about" id="about">
-  <div class="nn-about-text">
-    <div class="nn-section-label">About</div>
-    <div class="nn-section-title" style="font-size: 28px; margin-bottom: 1.25rem;">Who we are</div>
-    <p>NoroNetwork is an independent IT and cybersecurity company delivering practical, precise technical solutions to clients across the globe. Every engagement is handled with full attention, no outsourcing, no shortcuts.</p>
-    <p>We specialize in network configuration, VPN infrastructure, remote IT support and foundational cybersecurity work. Our approach is straightforward: understand the problem, solve it cleanly, and leave the client better protected than before.</p>
-    <p>Available remotely. Worldwide.</p>
-  </div>
-  <div class="nn-contact-box" id="contact">
-    <h3>Work with us</h3>
-    <p>Available for remote engagements worldwide. Reach out and we will respond promptly.</p>
-    <a class="nn-contact-link" href="mailto:noronetwork@proton.me">
-      noronetwork@proton.me
-      <span class="platform">Email</span>
-    </a>
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div class="contact-left">
+      <div class="section-eyebrow">Contact</div>
+      <h2 class="section-title">Let&#8217;s solve<br><em>your problem.</em></h2>
+      <p>Tell us what you are dealing with. We will respond with a clear assessment and a straightforward plan.</p>
+    </div>
+    <div>
+      <div class="contact-form">
+        <div class="form-field">
+          <label>Your name</label>
+          <input type="text" id="f-name" placeholder="Full name">
+        </div>
+        <div class="form-field">
+          <label>Email address</label>
+          <input type="email" id="f-email" placeholder="you@example.com">
+        </div>
+        <div class="form-field">
+          <label>What do you need help with?</label>
+          <textarea id="f-msg" rows="4" placeholder="Describe your problem or project..."></textarea>
+        </div>
+        <button class="form-submit" id="f-btn">Send message &#8594;</button>
+        <div class="form-msg" id="f-status"></div>
+      </div>
+    </div>
   </div>
 </section>
 
-<footer class="nn-footer">
-  <div class="nn-footer-logo">Noro<span>Network</span></div>
-  <p>Professional IT & cybersecurity services. Remote. Worldwide.</p>
-  <p>© 2026 NoroNetwork. All rights reserved.</p>
+<footer>
+  <a class="footer-logo" href="#">Noro<span>Network</span></a>
+  <span class="footer-copy">&#169; 2026 NoroNetwork &middot; Remote IT &amp; Cybersecurity &middot; Worldwide</span>
 </footer>
 
+<script>
+(function () {
+  /* ── NETWORK CANVAS ── */
+  var canvas = document.getElementById('netCanvas');
+  var ctx = canvas.getContext('2d');
+  var W, H, nodes, animId;
+  var NODE_COUNT = 38;
+  var MAX_DIST = 130;
+
+  function resize() {
+    var rect = canvas.parentElement.getBoundingClientRect();
+    W = canvas.width = rect.width;
+    H = canvas.height = rect.height;
+  }
+
+  function makeNodes() {
+    nodes = [];
+    for (var i = 0; i < NODE_COUNT; i++) {
+      nodes.push({
+        x: Math.random() * W,
+        y: Math.random() * H,
+        vx: (Math.random() - 0.5) * 0.45,
+        vy: (Math.random() - 0.5) * 0.45,
+        r: Math.random() * 2 + 1.2,
+        pulse: Math.random() * Math.PI * 2
+      });
+    }
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+
+    for (var i = 0; i < nodes.length; i++) {
+      for (var j = i + 1; j < nodes.length; j++) {
+        var dx = nodes[j].x - nodes[i].x;
+        var dy = nodes[j].y - nodes[i].y;
+        var d = Math.sqrt(dx * dx + dy * dy);
+        if (d < MAX_DIST) {
+          var alpha = (1 - d / MAX_DIST) * 0.35;
+          ctx.beginPath();
+          ctx.moveTo(nodes[i].x, nodes[i].y);
+          ctx.lineTo(nodes[j].x, nodes[j].y);
+          ctx.strokeStyle = 'rgba(26,115,232,' + alpha + ')';
+          ctx.lineWidth = 0.8;
+          ctx.stroke();
+        }
+      }
+    }
+
+    for (var k = 0; k < nodes.length; k++) {
+      var n = nodes[k];
+      n.pulse += 0.025;
+      var glow = 0.55 + 0.45 * Math.sin(n.pulse);
+      var isPrimary = k % 7 === 0;
+      var rad = isPrimary ? n.r * 2.2 : n.r;
+
+      if (isPrimary) {
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, rad * 3, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(26,115,232,' + (0.07 * glow) + ')';
+        ctx.fill();
+      }
+
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, rad, 0, Math.PI * 2);
+      ctx.fillStyle = isPrimary
+        ? 'rgba(26,115,232,' + (0.7 + 0.3 * glow) + ')'
+        : 'rgba(255,255,255,' + (0.28 + 0.22 * glow) + ')';
+      ctx.fill();
+
+      n.x += n.vx;
+      n.y += n.vy;
+      if (n.x < 0 || n.x > W) n.vx *= -1;
+      if (n.y < 0 || n.y > H) n.vy *= -1;
+    }
+
+    animId = requestAnimationFrame(draw);
+  }
+
+  function init() {
+    cancelAnimationFrame(animId);
+    resize();
+    makeNodes();
+    draw();
+  }
+
+  window.addEventListener('resize', init);
+  init();
+
+  /* ── CONTACT FORM ── */
+  var btn = document.getElementById('f-btn');
+  var status = document.getElementById('f-status');
+
+  btn.addEventListener('click', function () {
+    var name  = document.getElementById('f-name').value.trim();
+    var email = document.getElementById('f-email').value.trim();
+    var msg   = document.getElementById('f-msg').value.trim();
+    var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+    if (!name || !email || !msg) {
+      status.textContent = 'Please fill in all fields before sending.';
+      status.className = 'form-msg err';
+      return;
+    }
+    if (!emailOk) {
+      status.textContent = 'That email address does not look right.';
+      status.className = 'form-msg err';
+      return;
+    }
+
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    status.textContent = '';
+    status.className = 'form-msg';
+
+    setTimeout(function () {
+      btn.textContent = 'Message sent \u2713';
+      status.textContent = 'We received your message. Expect a reply within 24 hours.';
+      status.className = 'form-msg ok';
+      document.getElementById('f-name').value = '';
+      document.getElementById('f-email').value = '';
+      document.getElementById('f-msg').value = '';
+    }, 900);
+  });
+}());
+</script>
 </body>
 </html>
